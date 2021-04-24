@@ -28,6 +28,11 @@ const learnAnimations: ReadonlyArray<learnAnimationsProps> = [
         screen: "Transitions",
         title: "🔁 Transitions",
         key: 2
+    },
+    {
+        screen: "AnimationsPause",
+        title: "🐎 AnimationsPause",
+        key: 3
     }
 ] as const;
 
