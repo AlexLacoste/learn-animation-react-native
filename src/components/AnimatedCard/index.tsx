@@ -12,16 +12,18 @@ const { width } = Dimensions.get("window");
 const origin = -(width / 2 - StyleGuide.spacing * 2);
 
 interface AnimatedCardProps {
-    toggled: boolean;
+    transition: Animated.SharedValue<number>;
     index: number;
     card: Cards;
 }
 
-const AnimatedCard = ({ card, toggled, index }: AnimatedCardProps) => {
-    const rotate = toggled ? ((index - 1) * Math.PI) / 6 : 0;
-    const style = {
-        transform: [{ translateX: origin }, { rotate: `${rotate}rad` }, { translateX: -origin }]
-    };
+const AnimatedCard = ({ card, transition, index }: AnimatedCardProps) => {
+    const style = useAnimatedStyle(() => {
+        const rotate: number = (index - 1) * mix(transition.value, 0, Math.PI / 6);
+        return {
+            transform: [{ translateX: origin }, { rotate: `${rotate}rad` }, { translateX: -origin }]
+        };
+    });
     return (
         <Animated.View key={card} style={[styles.overlay, style]}>
             <Card {...{ card }} />
