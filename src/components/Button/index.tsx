@@ -15,6 +15,7 @@ interface ButtonProps {
 const Button = ({ label, primary, onPress }: ButtonProps) => {
     const color = primary ? "white" : undefined;
     const backgroundColor = primary ? StyleGuide.palette.primary : undefined;
+
     return (
         <RectButton {...{ onPress }}>
             <SafeAreaView style={{ backgroundColor }}>
