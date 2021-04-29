@@ -64,7 +64,8 @@ module.exports = {
                 jsx: "never"
             }
         ],
-        "react/jsx-props-no-spreading": 0
+        "react/jsx-props-no-spreading": 0,
+        "no-param-reassign": 0
     },
     settings: {
         "import/extensions": [".js", ".jsx", ".ts", ".tsx"],

@@ -13,6 +13,7 @@ const Bubble = ({ progress, start, end }: BubbleProps) => {
     const style = useAnimatedStyle(() => {
         const opacity: number = interpolate(progress.value, [start, end], [0.5, 1], Extrapolate.CLAMP);
         const scale: number = interpolate(progress.value, [start, end], [1, 1.5], Extrapolate.CLAMP);
+
         return { opacity, transform: [{ scale }] };
     });
 

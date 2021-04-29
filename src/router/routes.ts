@@ -4,4 +4,5 @@ export type Routes = {
     PanGesture: undefined;
     Transitions: undefined;
     AnimationsPause: undefined;
+    CircularSlider: undefined;
 };

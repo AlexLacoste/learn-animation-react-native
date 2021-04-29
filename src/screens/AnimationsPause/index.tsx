@@ -12,7 +12,7 @@ import styles from "./style";
 const AnimationsPause = () => {
     const [play, setPlay] = useState(false);
     const paused = useSharedValue(!play);
-    const progress = useSharedValue<null | number>(null);
+    const progress = useSharedValue<number | null>(null);
 
     return (
         <View style={styles.container}>
@@ -25,14 +25,7 @@ const AnimationsPause = () => {
                     paused.value = !paused.value;
                     if (progress.value === null) {
                         progress.value = withPause(
-                            withRepeat(
-                                withTiming(1, {
-                                    duration: 1000,
-                                    easing: Easing.inOut(Easing.ease)
-                                }),
-                                -1,
-                                true
-                            ),
+                            withRepeat(withTiming(1, { duration: 1000, easing: Easing.inOut(Easing.ease) }), -1, true),
                             paused
                         );
                     }

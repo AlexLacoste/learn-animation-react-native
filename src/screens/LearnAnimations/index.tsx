@@ -5,7 +5,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { RectButton, FlatList } from "react-native-gesture-handler";
 
 import { Routes } from "../../router/routes";
-import styles from "./styles";
+import styles from "./style";
 
 interface learnAnimationsProps {
     screen: string;
@@ -33,6 +33,11 @@ const learnAnimations: ReadonlyArray<learnAnimationsProps> = [
         screen: "AnimationsPause",
         title: "🐎 AnimationsPause",
         key: 3
+    },
+    {
+        screen: "CircularSlider",
+        title: "⭕️ Circular Slider",
+        key: 4
     }
 ] as const;
 
