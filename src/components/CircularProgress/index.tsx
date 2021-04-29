@@ -1,9 +1,7 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import Animated, { interpolateColor, useAnimatedProps } from "react-native-reanimated";
+import Animated, { useAnimatedProps } from "react-native-reanimated";
 import Svg, { Circle } from "react-native-svg";
-import StyleGuide from "../StyleGuide";
-
 
 const { PI } = Math;
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
@@ -19,14 +17,7 @@ const CircularProgress = ({ theta, r, strokeWidth, backgroundColor }: CircularPr
     const radius = r - strokeWidth / 2;
     const circumference = radius * 2 * PI;
 
-    const props = useAnimatedProps(() => {
-        backgroundColor.value = interpolateColor(
-            theta.value,
-            [0, Math.PI, Math.PI * 2],
-            ["#ff4f38", StyleGuide.palette.primary, "#383fff"]
-        );
-        return { stroke: backgroundColor.value, strokeDashoffset: theta.value * radius };
-    });
+    const props = useAnimatedProps(() => ({ stroke: backgroundColor.value, strokeDashoffset: theta.value * radius }));
 
     return (
         <Svg style={StyleSheet.absoluteFill}>

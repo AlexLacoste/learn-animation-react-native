@@ -1,8 +1,7 @@
 import React from "react";
 import { PanGestureHandler } from "react-native-gesture-handler";
-import Animated, { interpolateColor, useAnimatedGestureHandler, useAnimatedStyle } from "react-native-reanimated";
+import Animated, { useAnimatedGestureHandler, useAnimatedStyle } from "react-native-reanimated";
 import { canvas2Polar, clamp, polar2Canvas } from "react-native-redash";
-import StyleGuide from "../StyleGuide";
 import styles from "./style";
 
 const THRESHOLD = 0.001;
@@ -49,11 +48,6 @@ const Cursor = ({ r, strokeWidth, theta, backgroundColor }: CursorProps) => {
                 radius: r
             },
             center
-        );
-        backgroundColor.value = interpolateColor(
-            theta.value,
-            [0, Math.PI, Math.PI * 2],
-            ["#ff4f38", StyleGuide.palette.primary, "#383fff"]
         );
 
         return { backgroundColor: backgroundColor.value, transform: [{ translateX }, { translateY }] };

@@ -1,12 +1,13 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import Animated, { useSharedValue } from "react-native-reanimated";
+import Animated, { interpolateColor, useDerivedValue, useSharedValue } from "react-native-reanimated";
 import { canvas2Polar } from "react-native-redash";
 
 import Cursor from "../../components/Cursor";
 import CircularProgress from "../../components/CircularProgress";
 
 import styles, { r } from "./style";
+import StyleGuide from "../../components/StyleGuide";
 
 const STROKE_WIDTH: number = 40;
 
@@ -14,7 +15,9 @@ const defaultTheta: number = canvas2Polar({ x: 0, y: 0 }, { x: r, y: r }).theta;
 
 const CircularSlider = () => {
     const theta: Animated.SharedValue<number> = useSharedValue(defaultTheta);
-    const backgroundColor: Animated.SharedValue<string | number> = useSharedValue<string | number>(0);
+    const backgroundColor: Readonly<Animated.SharedValue<string | number>> = useDerivedValue(() =>
+        interpolateColor(theta.value, [0, Math.PI, Math.PI * 2], ["#ff4f38", StyleGuide.palette.primary, "#383fff"])
+    );
 
     return (
         <View style={styles.container}>
