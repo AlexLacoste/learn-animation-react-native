@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import StyleGuide from "../StyleGuide";
+import StyleGuide from "../../StyleGuide";
 
 const size = 32;
 const styles = StyleSheet.create({

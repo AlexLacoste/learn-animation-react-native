@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { RectButton, FlatList } from "react-native-gesture-handler";
-
+import { Text, View } from "react-native";
+import { FlatList, RectButton } from "react-native-gesture-handler";
 import { Routes } from "../../router/routes";
 import styles from "./style";
+
 
 interface learnAnimationsProps {
     screen: string;
@@ -38,6 +38,11 @@ const learnAnimations: ReadonlyArray<learnAnimationsProps> = [
         screen: "CircularSlider",
         title: "⭕️ Circular Slider",
         key: 4
+    },
+    {
+        screen: "GraphInteractions",
+        title: "📈 Graph Interactions",
+        key: 5
     }
 ] as const;
 

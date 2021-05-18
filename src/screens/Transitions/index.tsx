@@ -4,7 +4,7 @@ import { useSpring } from "react-native-redash";
 
 import Button from "../../components/Button";
 import { Cards, cards } from "../../components/Card";
-import AnimatedCard from "../../components/AnimatedCard";
+import AnimatedCard from "../../components/TransitionsComponents/AnimatedCard";
 
 import styles from "./style";
 

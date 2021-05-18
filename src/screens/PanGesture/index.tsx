@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, LayoutRectangle } from "react-native";
 
-import CardPanGesture from "../../components/CardPanGesture";
+import CardPanGesture from "../../components/PanGestureComponents/CardPanGesture";
 import styles from "./style";
 
 const PanGesture = () => {

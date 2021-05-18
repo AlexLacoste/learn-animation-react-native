@@ -3,8 +3,8 @@ import { Dimensions } from "react-native";
 import Animated, { useAnimatedStyle } from "react-native-reanimated";
 import { mix } from "react-native-redash";
 
-import { Card, Cards } from "../Card";
-import StyleGuide from "../StyleGuide";
+import { Card, Cards } from "../../Card";
+import StyleGuide from "../../StyleGuide";
 
 import styles from "./style";
 

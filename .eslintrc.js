@@ -1,6 +1,6 @@
 module.exports = {
     root: true,
-    parser: "babel-eslint",
+    parser: "@typescript-eslint/parser",
     extends: ["airbnb", "prettier", "plugin:flowtype/recommended"],
     plugins: ["react", "react-native", "jsx-a11y", "import", "react-hooks"],
     parserOptions: {

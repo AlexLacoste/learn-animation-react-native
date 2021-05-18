@@ -9,8 +9,8 @@ import Animated, {
 } from "react-native-reanimated";
 import { clamp, withBouncing } from "react-native-redash";
 
-import { Card, Cards } from "../Card";
-import { CARD_WIDTH, CARD_HEIGHT } from "../Card/style";
+import { Card, Cards } from "../../Card";
+import { CARD_WIDTH, CARD_HEIGHT } from "../../Card/style";
 import styles from "./style";
 
 interface CardPanGestureProps {

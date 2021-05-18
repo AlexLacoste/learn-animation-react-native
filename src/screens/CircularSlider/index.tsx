@@ -3,8 +3,8 @@ import { View, StyleSheet } from "react-native";
 import Animated, { interpolateColor, useDerivedValue, useSharedValue } from "react-native-reanimated";
 import { canvas2Polar } from "react-native-redash";
 
-import Cursor from "../../components/Cursor";
-import CircularProgress from "../../components/CircularProgress";
+import Cursor from "../../components/CircularSliderComponents/Cursor";
+import CircularProgress from "../../components/CircularSliderComponents/CircularProgress";
 
 import styles, { r } from "./style";
 import StyleGuide from "../../components/StyleGuide";

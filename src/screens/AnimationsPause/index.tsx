@@ -5,7 +5,7 @@ import { withPause } from "react-native-redash";
 
 import Button from "../../components/Button";
 
-import ChatBubble from "../../components/ChatBubble";
+import ChatBubble from "../../components/AnimationsPauseComponents/ChatBubble";
 
 import styles from "./style";
 

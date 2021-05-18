@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import StyleGuide from "../StyleGuide";
+import StyleGuide from "../../StyleGuide";
 
 const styles = StyleSheet.create({
     overlay: {

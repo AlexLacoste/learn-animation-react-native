@@ -5,4 +5,5 @@ export type Routes = {
     Transitions: undefined;
     AnimationsPause: undefined;
     CircularSlider: undefined;
+    GraphInteractions: undefined;
 };
