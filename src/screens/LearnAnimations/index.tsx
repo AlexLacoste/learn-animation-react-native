@@ -6,7 +6,6 @@ import { FlatList, RectButton } from "react-native-gesture-handler";
 import { Routes } from "../../router/routes";
 import styles from "./style";
 
-
 interface learnAnimationsProps {
     screen: string;
     title: string;
@@ -17,33 +16,38 @@ const learnAnimations: ReadonlyArray<learnAnimationsProps> = [
     {
         screen: "Worklets",
         title: "👩‍🏭 Worklets",
-        key: 0
+        key: 0,
     },
     {
         screen: "PanGesture",
         title: "💳 PanGesture",
-        key: 1
+        key: 1,
     },
     {
         screen: "Transitions",
         title: "🔁 Transitions",
-        key: 2
+        key: 2,
     },
     {
         screen: "AnimationsPause",
         title: "🐎 AnimationsPause",
-        key: 3
+        key: 3,
     },
     {
         screen: "CircularSlider",
         title: "⭕️ Circular Slider",
-        key: 4
+        key: 4,
     },
     {
         screen: "GraphInteractions",
         title: "📈 Graph Interactions",
-        key: 5
-    }
+        key: 5,
+    },
+    {
+        screen: "Swiping",
+        title: "💚 Swiping",
+        key: 6,
+    },
 ] as const;
 
 const LearnAnimations = () => {
@@ -59,7 +63,7 @@ const LearnAnimations = () => {
                     </View>
                 </RectButton>
             )}
-            keyExtractor={( item ) => item.key.toString()}
+            keyExtractor={(item) => item.key.toString()}
             showsVerticalScrollIndicator={false}
         />
         // <ScrollView

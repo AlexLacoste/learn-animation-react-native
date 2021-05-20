@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         width: CURSOR,
         height: CURSOR,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
         //backgroundColor: "rgba(100, 200, 300, 0.4)",
     },
     cursor: {
@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         borderColor: "#367be2",
         borderWidth: 4,
-        backgroundColor: "white"
-    }
+        backgroundColor: "white",
+    },
 });
 
 export default styles;

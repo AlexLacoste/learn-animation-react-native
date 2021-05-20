@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
         height: 40,
         borderRadius: 40 / 2,
         borderColor: "white",
-        borderWidth: 5
-    }
+        borderWidth: 5,
+    },
 });
 
 export default styles;

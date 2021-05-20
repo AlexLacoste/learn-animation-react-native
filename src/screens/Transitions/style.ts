@@ -6,8 +6,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: StyleGuide.palette.background,
-        justifyContent: "flex-end"
-    }
+        justifyContent: "flex-end",
+    },
 });
 
 export default styles;

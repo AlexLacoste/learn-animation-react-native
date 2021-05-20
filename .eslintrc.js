@@ -5,11 +5,11 @@ module.exports = {
     plugins: ["react", "react-native", "jsx-a11y", "import", "react-hooks"],
     parserOptions: {
         ecmaFeatures: {
-            jsx: true
-        }
+            jsx: true,
+        },
     },
     env: {
-        "react-native/react-native": true
+        "react-native/react-native": true,
     },
     rules: {
         "react-hooks/rules-of-hooks": "error",
@@ -24,7 +24,7 @@ module.exports = {
         "function-paren-newline": 0,
         semi: ["error", "always"],
         "spaced-comment": 0,
-        "comma-dangle": ["error", "never"],
+        "comma-dangle": ["error", "always-multiline"],
         "react/prop-types": 0,
         "no-extra-boolean-cast": 0,
         "quote-props": 0,
@@ -61,21 +61,21 @@ module.exports = {
                 ts: "never",
                 tsx: "never",
                 js: "never",
-                jsx: "never"
-            }
+                jsx: "never",
+            },
         ],
         "react/jsx-props-no-spreading": 0,
-        "no-param-reassign": 0
+        "no-param-reassign": 0,
     },
     settings: {
         "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
         "import/parsers": {
-            "@typescript-eslint/parser": [".ts", ".tsx"]
+            "@typescript-eslint/parser": [".ts", ".tsx"],
         },
         "import/resolver": {
             node: {
-                extensions: [".js", ".ts", ".tsx", ".ios.js", ".android.js"]
-            }
-        }
-    }
+                extensions: [".js", ".ts", ".tsx", ".ios.js", ".android.js"],
+            },
+        },
+    },
 };

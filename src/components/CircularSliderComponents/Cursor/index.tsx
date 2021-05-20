@@ -20,9 +20,9 @@ const Cursor = ({ r, strokeWidth, theta, backgroundColor }: CursorProps) => {
             ctx.offset = polar2Canvas(
                 {
                     theta: theta.value,
-                    radius: r
+                    radius: r,
                 },
-                center
+                center,
             );
         },
         onActive: (event, ctx: any) => {
@@ -39,15 +39,15 @@ const Cursor = ({ r, strokeWidth, theta, backgroundColor }: CursorProps) => {
             }
             const value: number = canvas2Polar({ x, y }, center).theta;
             theta.value = value > 0 ? value : 2 * Math.PI + value;
-        }
+        },
     });
     const style = useAnimatedStyle(() => {
         const { x: translateX, y: translateY } = polar2Canvas(
             {
                 theta: theta.value,
-                radius: r
+                radius: r,
             },
-            center
+            center,
         );
 
         return { backgroundColor: backgroundColor.value, transform: [{ translateX }, { translateY }] };
@@ -59,7 +59,7 @@ const Cursor = ({ r, strokeWidth, theta, backgroundColor }: CursorProps) => {
                 style={[
                     styles.circle,
                     { width: strokeWidth, height: strokeWidth, borderRadius: strokeWidth / 2 },
-                    style
+                    style,
                 ]}
             />
         </PanGestureHandler>

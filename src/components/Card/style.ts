@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
     card: {
         width: CARD_WIDTH,
         height: CARD_HEIGHT,
-        borderRadius: 16
-    }
+        borderRadius: 16,
+    },
 });
 
 export default styles;

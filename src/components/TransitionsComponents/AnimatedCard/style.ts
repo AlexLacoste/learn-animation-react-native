@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
         ...StyleSheet.absoluteFillObject,
         justifyContent: "center",
         alignItems: "center",
-        padding: StyleGuide.spacing * 4
-    }
+        padding: StyleGuide.spacing * 4,
+    },
 });
 
 export default styles;

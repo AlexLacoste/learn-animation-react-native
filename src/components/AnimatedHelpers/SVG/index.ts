@@ -43,12 +43,12 @@ export const parsePath = (d: string): PathInterface => {
             c2,
             to,
             start,
-            end
+            end,
         };
     });
     return {
         length,
-        curves
+        curves,
     };
 };
 
@@ -62,6 +62,6 @@ export const getPointAtLength = (path: PathInterface, length: number) => {
     const t = (length - c.start) / (c.end - c.start);
     return {
         x: cubicBezier(t, c.from.x, c.c1.x, c.c2.x, c.to.x),
-        y: cubicBezier(t, c.from.y, c.c1.y, c.c2.y, c.to.y)
+        y: cubicBezier(t, c.from.y, c.c1.y, c.c2.y, c.to.y),
     };
 };

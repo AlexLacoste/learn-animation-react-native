@@ -6,7 +6,7 @@ import Animated, {
     interpolate,
     useAnimatedGestureHandler,
     useAnimatedStyle,
-    withDecay
+    withDecay,
 } from "react-native-reanimated";
 
 import { PathInterface } from "../../AnimatedHelpers/SVG";
@@ -32,22 +32,22 @@ const Cursor = ({ path, length, point }: CursorProps) => {
                 ctx.offsetX + event.translationX,
                 [0, width],
                 [0, path.length],
-                Extrapolate.CLAMP
+                Extrapolate.CLAMP,
             );
         },
         onEnd: ({ velocityX }) => {
             length.value = withDecay({
                 velocity: velocityX,
                 clamp: [0, path.length],
-                deceleration: 0.9972
+                deceleration: 0.9972,
             });
-        }
+        },
     });
     const style = useAnimatedStyle(() => {
         const translateX = point.value.coord.x - CURSOR / 2;
         const translateY = point.value.coord.y - CURSOR / 2;
         return {
-            transform: [{ translateX }, { translateY }]
+            transform: [{ translateX }, { translateY }],
         };
     });
 

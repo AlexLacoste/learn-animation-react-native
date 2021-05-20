@@ -9,6 +9,7 @@ import Transitions from "../screens/Transitions";
 import AnimationsPause from "../screens/AnimationsPause";
 import CircularSlider from "../screens/CircularSlider";
 import GraphInteractions from "../screens/GraphInteractions";
+import Swiping from "../screens/Swiping";
 
 const RootStack = createStackNavigator<Routes>();
 
@@ -20,7 +21,12 @@ const Router = () => (
         <RootStack.Screen name="Transitions" component={Transitions} options={{ title: "Transitions" }} />
         <RootStack.Screen name="AnimationsPause" component={AnimationsPause} options={{ title: "Animations Pause" }} />
         <RootStack.Screen name="CircularSlider" component={CircularSlider} options={{ title: "Circular Slider" }} />
-        <RootStack.Screen name="GraphInteractions" component={GraphInteractions} options={{ title: "Graph Interactions" }} />
+        <RootStack.Screen
+            name="GraphInteractions"
+            component={GraphInteractions}
+            options={{ title: "Graph Interactions" }}
+        />
+        <RootStack.Screen name="Swiping" component={Swiping} options={{ title: "Tinder Swipe" }} />
     </RootStack.Navigator>
 );
 

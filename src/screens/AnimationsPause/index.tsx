@@ -26,7 +26,7 @@ const AnimationsPause = () => {
                     if (progress.value === null) {
                         progress.value = withPause(
                             withRepeat(withTiming(1, { duration: 1000, easing: Easing.inOut(Easing.ease) }), -1, true),
-                            paused
+                            paused,
                         );
                     }
                 }}

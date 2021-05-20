@@ -20,17 +20,17 @@ const data: [number, number][] = [
     { x: new Date(2020, 5, 3), y: 5310 },
     { x: new Date(2020, 5, 4), y: 7188 },
     { x: new Date(2020, 5, 5), y: 8677 },
-    { x: new Date(2020, 5, 6), y: 5012 }
+    { x: new Date(2020, 5, 6), y: 5012 },
 ].map((p) => [p.x.getTime(), p.y]);
 
 const domain = {
     x: [Math.min(...data.map(([x]) => x)), Math.max(...data.map(([x]) => x))],
-    y: [Math.min(...data.map(([, y]) => y)), Math.max(...data.map(([, y]) => y))]
+    y: [Math.min(...data.map(([, y]) => y)), Math.max(...data.map(([, y]) => y))],
 };
 
 const range = {
     x: [0, width],
-    y: [height, 0]
+    y: [height, 0],
 };
 
 const scale = (v: number, d: number[], r: number[]): number => {
@@ -60,12 +60,12 @@ const GraphInteractions = () => {
         return {
             coord: {
                 x: p.x,
-                y: p.y
+                y: p.y,
             },
             data: {
                 x: scaleInvert(p.x, domain.x, range.x),
-                y: scaleInvert(p.y, domain.y, range.y)
-            }
+                y: scaleInvert(p.y, domain.y, range.y),
+            },
         };
     });
 

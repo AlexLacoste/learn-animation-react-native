@@ -5,7 +5,7 @@ import Animated, {
     useAnimatedGestureHandler,
     useAnimatedStyle,
     useSharedValue,
-    withDecay
+    withDecay,
 } from "react-native-reanimated";
 import { clamp, withBouncing } from "react-native-redash";
 
@@ -43,22 +43,22 @@ const CardPanGesture = ({ width, height }: CardPanGestureProps) => {
         onEnd: ({ velocityX, velocityY }) => {
             translateX.value = withBouncing(
                 withDecay({
-                    velocity: velocityX
+                    velocity: velocityX,
                 }),
                 0,
-                boundX
+                boundX,
             );
             translateY.value = withBouncing(
                 withDecay({
-                    velocity: velocityY
+                    velocity: velocityY,
                 }),
                 0,
-                boundY
+                boundY,
             );
-        }
+        },
     });
     const style = useAnimatedStyle(() => ({
-        transform: [{ translateX: translateX.value }, { translateY: translateY.value }]
+        transform: [{ translateX: translateX.value }, { translateY: translateY.value }],
     }));
 
     return (

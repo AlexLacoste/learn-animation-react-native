@@ -16,7 +16,7 @@ const defaultTheta: number = canvas2Polar({ x: 0, y: 0 }, { x: r, y: r }).theta;
 const CircularSlider = () => {
     const theta: Animated.SharedValue<number> = useSharedValue(defaultTheta);
     const backgroundColor: Readonly<Animated.SharedValue<string | number>> = useDerivedValue(() =>
-        interpolateColor(theta.value, [0, Math.PI, Math.PI * 2], ["#ff4f38", StyleGuide.palette.primary, "#383fff"])
+        interpolateColor(theta.value, [0, Math.PI, Math.PI * 2], ["#ff4f38", StyleGuide.palette.primary, "#383fff"]),
     );
 
     return (
